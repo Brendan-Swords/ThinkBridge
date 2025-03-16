@@ -18,6 +18,8 @@
     "preview": "next build && next start",
     "start": "next start",
     "typecheck": "tsc --noEmit"
+    "homepage": "https://Brendan-Swords.github.io/ThinkBridge"
+
   },
   "dependencies": {
     "@auth/drizzle-adapter": "^1.7.2",

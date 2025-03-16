@@ -1,10 +1,11 @@
 {
   "name": "thinkhub",
   "version": "0.1.0",
+  "homepage": "https://Brendan-Swords.github.io/ThinkBridge",
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "next build",
+    "build": "next build && next export",
     "check": "next lint && tsc --noEmit",
     "db:generate": "drizzle-kit generate",
     "db:migrate": "drizzle-kit migrate",
@@ -17,9 +18,9 @@
     "lint:fix": "next lint --fix",
     "preview": "next build && next start",
     "start": "next start",
-    "typecheck": "tsc --noEmit"
-    "homepage": "https://Brendan-Swords.github.io/ThinkBridge"
-
+    "typecheck": "tsc --noEmit",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d out"
   },
   "dependencies": {
     "@auth/drizzle-adapter": "^1.7.2",
@@ -55,6 +56,7 @@
     "eslint": "^8.57.0",
     "eslint-config-next": "^15.0.1",
     "eslint-plugin-drizzle": "^0.2.3",
+    "gh-pages": "^6.3.0",
     "postcss": "^8.4.39",
     "prettier": "^3.3.2",
     "prettier-plugin-tailwindcss": "^0.6.5",
